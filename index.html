@@ -69,6 +69,7 @@
               <li><a href="https://github.com/tilowr" target="_blank">GitHub</a></li>
               <li><a href="http://www.linkedin.com/in/witaloreboucas" target="_blank">LinkedIn</a></li>
               <li><a href="https://twitter.com/tilowr" target="_blank">Twitter</a></li>
+              <li><a href="https://plus.google.com/111686011062366113684?rel=author" target="_blank">Google+</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -108,7 +109,7 @@
 
               <h2>Exemplos</h2>
 
-              <h3>Inicializando</h3>
+              <h3>Inicializando Normalmente</h3>
               <p>Inicializando CustomSelect normalmente, à partir do input hidden que existe na página</p>
 
               <div class="bs-docs-example">
@@ -127,6 +128,59 @@
     &lt;/ul&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
+
+              <h3>Alternando entre somente leitura e Leitura e Escrita</h3>
+
+              <p>É possivel mudar o CustomSelect para somente leitura utilizando o método <code>.customselect('toReadOnly')</code> ou já inicializa-lo dessa forma usando o atributo <code>data-readonly="true"</code>, quando está em modo somente leitura os binds de click, focus e navegação por setas são desabilitados, além de ser adicionado uma classe <code>readonly</code> e um atributo <code>readonly="readonly"</code>, para retornar para o modo Escrita e leitura basta utilizar o método <code>.customselect('toReadAndWrite')</code></p>
+
+              <div class="bs-docs-example">
+                <input type="hidden" id="inputToReadOnly" class="customselect" data-overload="1|Laranja,2|Azul,3|Vermelho,5|Roxo,6|Branco,7|Preto" />
+
+                <a class="btn" id="BtToReadOnly" style="margin-top: 20px;" href="#">Somente Leitura</a>
+                <a class="btn" id="BtToReadAndWrite" style="margin-top: 20px;" href="#">Leitura e Escrita</a>
+              </div>
+              <pre class="prettyprint linenums">
+&lt;!-- Iniciado normalmente --&gt;
+&lt;input type="hidden" id="inputToReadOnly" class="customselect" data-overload="1|Laranja,2|Azul,3|Vermelho,5|Roxo,6|Branco,7|Preto" /&gt;
+$('#inputToReadOnly').customselect();
+
+&lt;!-- Mudando para somente leitura --&gt;
+$('#BtToReadOnly').click(function(e){
+  e.preventDefault();
+  $('#inputToReadOnly').customselect('toReadOnly');
+});
+
+&lt;!-- Mudando para leitura e Escrita --&gt;
+$('#BtToReadAndWrite').click(function(e){
+  e.preventDefault();
+  $('#inputToReadOnly').customselect('toReadAndWrite');
+});</pre>
+
+              <h3>Adicionando novos itens</h3>
+              <p>Muitas vezes precisamos atualizar o valor da lista dinamicamente, isso pode ser feito de duas formas, com os métodos <code>.customselect('addNewItem')</code> e <code>.customselect('refresh')</code>. O método <code>.customselect('addNewItem')</code> recebe um objeto JSON com dois atributos, ID e Text <code>{id: '1', text: 'Novo Item'}</code> que são adicionados a lista, e ja o marca como item selecionado, mudando o valor do label e do value do input. <b>Atenção: O Plugin não trata se os dados inseridos são válidos</b>, o método <code>.customselect('refresh')</code> deve ser utilizado quando os valores do atributo <code>data-overload=""</code> são alterados manualmente.</p>
+
+              <div class="bs-docs-example">
+                <input type="hidden" id="hiddenAddNewItem" class="customselect" data-overload="1|Laranja,2|Azul,3|Vermelho,5|Roxo,6|Branco,7|Preto" />
+                <p style="margin-top: 20px;">
+                  <input type="text" id="idAddNewItem" placeholder="Novo ID" style="width: 50px; vertical-align: top;" />
+                  <input type="text" id="textAddNewItem" placeholder="Novo Text" style=" vertical-align: top;" />
+                  <a class="btn" id="btAddNewItem" href="#" style="vertical-align: top;">Adicionar</a>
+                </p>
+              </div>
+
+              <pre class="prettyprint linenums">
+&lt;!-- Iniciado normalmente --&gt;
+&lt;input type="hidden" id="inputToReadOnly" class="customselect" data-overload="1|Laranja,2|Azul,3|Vermelho,5|Roxo,6|Branco,7|Preto" /&gt;
+&lt;input type="text" id="idAddNewItem" placeholder="Novo ID" /&gt;
+&lt;input type="text" id="textAddNewItem" placeholder="Insira /&gt;
+$('#hiddenAddNewItem').customselect();
+
+&lt;!-- Adicionando Itens --&gt;
+$('#btAddNewItem').click(function(e){
+  e.preventDefault();
+  $('#hiddenAddNewItem').customselect('addNewItem', {id: $('#idAddNewItem').val(), text: $('#textAddNewItem').val()});
+});
+</pre>
 
               <hr class="bs-docs-separator" />
 
@@ -264,6 +318,28 @@ $('#sample').customselect({
 
         // jQueryCustomSelect
         $('#SamplejQueryCustomSelect').customselect();
+
+        // Somente Leitura
+        $('#inputToReadOnly').customselect();
+
+        $('#BtToReadOnly').click(function(e){
+          e.preventDefault();
+          $('#inputToReadOnly').customselect('toReadOnly');
+        });
+
+        // Leitura e Escrita
+        $('#BtToReadAndWrite').click(function(e){
+          e.preventDefault();
+          $('#inputToReadOnly').customselect('toReadAndWrite');
+        });
+
+        // Adicionar Novo Item
+        $('#hiddenAddNewItem').customselect();
+
+        $('#btAddNewItem').click(function(e){
+          e.preventDefault();
+          $('#hiddenAddNewItem').customselect('addNewItem', {id: $('#idAddNewItem').val(), text: $('#textAddNewItem').val()});
+        });
       });
     </script>
 
