@@ -10,15 +10,6 @@
 
     <!-- Le styles -->
     <link href="http://tilowr.com.br/Scripts/bootstrap/css/bootstrap.css" rel="stylesheet" />
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-      .sidebar-nav {
-        padding: 9px 0;
-      }
-    </style>
     <link href="http://tilowr.com.br/Scripts/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
     <link href="http://tilowr.com.br/Scripts/bootstrap/css/docs.css" rel="stylesheet" />
 
@@ -82,8 +73,8 @@
           <div class="bs-docs-sidebar">
             <ul class="nav nav-list bs-docs-sidenav affix">
       				<li><a href="#jQueryCustomSelect"><i class="icon-chevron-right"></i>jQueryCustomSelect</a></li>
-              <li><a href="#jQueryLoader"><i class="icon-chevron-right"></i>jQueryLoader</a></li>
               <!--  
+              <li><a href="#jQueryLoader"><i class="icon-chevron-right"></i>jQueryLoader</a></li>
               <li><a href="#jQueryBannerFullPage"><i class="icon-chevron-right"></i>jQueryBannerFullPage</a></li>
               <li><a href="#jQueryMsgBox"><i class="icon-chevron-right"></i>jQueryMsgBox</a></li>
               <li><a href="#jQueryFormValidator"><i class="icon-chevron-right"></i>jQueryFormValidator</a></li>
@@ -100,7 +91,10 @@
           <div class="row-fluid">
             
             <section id="jQueryCustomSelect">
-              <div class="page-header"><h1>jQueryCustomSelect <small>jquery.customselect.js</small></h1></div>
+              <div class="page-header">
+                <h1>jQueryCustomSelect <small>jquery.customselect.js</small></h1>
+                <p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tilowr.com.br/github/#jQueryCustomSelect" data-via="tilowr" data-lang="pt" data-hashtags="jqueryPlugins">Tweetar</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
+              </div>
 
               <h2>Sobre</h2>
               <p>O CustomSelect tem como principal objetivo facilitar o uso e a customização de selects com uma aparencia mais agradável e mais maleável do que às oferecidas pelos SO/Navegadores, feito utilizando HTML, CSS e JavaScript, tem sua estrutura aceita por todos os navegadores atuais. além de podemos ser submetido com um form ainda pode ser navegável pelo teclado facilitando seu uso.</p>
@@ -278,7 +272,7 @@ $('#sample').customselect({
   }
 });</pre>
             </section>
-
+<!--
             <section id="jQueryLoader">
               <div class="page-header"><h1>jQueryLoader <small>jquery.loader.js</small></h1></div>
 
@@ -355,7 +349,7 @@ $('#sample').customselect({
 
             </section>
 
-            <!--
+            
             <section id="jQueryBannerFullPage"><div class="page-header"><h1>jQueryBannerFullPage</h1></div></section>
             <section id="jQueryMsgBox"><div class="page-header"><h1>jQueryMsgBox</h1></div></section>
             <section id="jQueryFormValidator"><div class="page-header"><h1>jQueryFormValidator</h1></div></section>
@@ -366,13 +360,26 @@ $('#sample').customselect({
       </div><!--/row-->
 
       <hr>
-
-      <footer>
-        <p>&copy; TiloWR 2012</p>
-      </footer>
-
     </div><!--/.fluid-container-->
+    <footer class="footer">
+      <div class="container">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p style="margin-bottom: 10px;">TiloWR jQuery Plugins. Made with <a target="_blank" href="http://getbootstrap.com">Bootstrap.</a></p>
+        <p style="margin-bottom: 10px;"><a href="https://twitter.com/TiloWR" class="twitter-follow-button" data-show-count="false" data-lang="pt">Seguir @TiloWR</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
+        <p style="margin-bottom: 10px;"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tilowr.com.br/github/" data-via="tilowr" data-lang="pt" data-hashtags="jqueryPlugins">Tweetar</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
+  <!--
 
+<p>Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank" wrc_done="true">@twitter</a>&nbsp;<span class="wrc_icon wrc13" rating="{&quot;icon&quot;:&quot;green3-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:3,&quot;flags&quot;:{}}"></span> by <a href="http://twitter.com/mdo" target="_blank" wrc_done="true">@mdo</a>&nbsp;<span class="wrc_icon wrc13" rating="{&quot;icon&quot;:&quot;green3-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:3,&quot;flags&quot;:{}}"></span> and <a href="http://twitter.com/fat" target="_blank" wrc_done="true">@fat</a>&nbsp;<span class="wrc_icon wrc13" rating="{&quot;icon&quot;:&quot;green3-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:3,&quot;flags&quot;:{}}"></span>.</p>
+<p>Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank" wrc_done="true">Apache License v2.0</a>&nbsp;<span class="wrc_icon wrc11" rating="{&quot;icon&quot;:&quot;green1-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:1,&quot;flags&quot;:{}}"></span>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/" wrc_done="true">CC BY 3.0</a>&nbsp;<span class="wrc_icon wrc11" rating="{&quot;icon&quot;:&quot;green1-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:1,&quot;flags&quot;:{}}"></span>.</p>
+<p>Icons from <a href="http://glyphicons.com" wrc_done="true">Glyphicons Free</a>&nbsp;<span class="wrc_icon wrc0" rating="{&quot;icon&quot;:&quot;grey0-16.png&quot;,&quot;rating&quot;:0,&quot;weight&quot;:0,&quot;flags&quot;:{}}"></span>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/" wrc_done="true">CC BY 3.0</a>&nbsp;<span class="wrc_icon wrc11" rating="{&quot;icon&quot;:&quot;green1-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:1,&quot;flags&quot;:{}}"></span>.</p>
+<ul class="footer-links">
+<li><a href="http://blog.getbootstrap.com" wrc_done="true">Read the blog</a>&nbsp;<span class="wrc_icon wrc0" rating="{&quot;icon&quot;:&quot;grey0-16.png&quot;,&quot;rating&quot;:0,&quot;weight&quot;:0,&quot;flags&quot;:{}}"></span></li>
+<li><a href="https://github.com/twitter/bootstrap/issues?state=open" wrc_done="true">Submit issues</a>&nbsp;<span class="wrc_icon wrc13" rating="{&quot;icon&quot;:&quot;green3-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:3,&quot;flags&quot;:{&quot;it&quot;:1}}"></span></li>
+<li><a href="https://github.com/twitter/bootstrap/wiki" wrc_done="true">Roadmap and changelog</a>&nbsp;<span class="wrc_icon wrc13" rating="{&quot;icon&quot;:&quot;green3-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:3,&quot;flags&quot;:{&quot;it&quot;:1}}"></span></li>
+</ul>
+-->
+      </div>
+    </footer>
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -394,13 +401,6 @@ $('#sample').customselect({
           e.preventDefault()
         })
 
-        // side bar
-        $('.bs-docs-sidenav').affix({
-          offset: {
-          top: function () { return $window.width() <= 980 ? 290 : 210 }
-          , bottom: 270
-          }
-        })
         //prettify
         prettyPrint();
 
