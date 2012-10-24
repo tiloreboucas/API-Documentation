@@ -82,8 +82,8 @@
           <div class="bs-docs-sidebar">
             <ul class="nav nav-list bs-docs-sidenav affix">
       				<li><a href="#jQueryCustomSelect"><i class="icon-chevron-right"></i>jQueryCustomSelect</a></li>
-              <!--  
               <li><a href="#jQueryLoader"><i class="icon-chevron-right"></i>jQueryLoader</a></li>
+              <!--  
               <li><a href="#jQueryBannerFullPage"><i class="icon-chevron-right"></i>jQueryBannerFullPage</a></li>
               <li><a href="#jQueryMsgBox"><i class="icon-chevron-right"></i>jQueryMsgBox</a></li>
               <li><a href="#jQueryFormValidator"><i class="icon-chevron-right"></i>jQueryFormValidator</a></li>
@@ -278,8 +278,84 @@ $('#sample').customselect({
   }
 });</pre>
             </section>
+
+            <section id="jQueryLoader">
+              <div class="page-header"><h1>jQueryLoader <small>jquery.loader.js</small></h1></div>
+
+              <h2>Sobre</h2>
+              <p>Descrição</p>
+
+              <p><a class="btn btn-primary btn-large" href="#" target="_blank">Baixar do GitHub »</a></p>
+
+              <hr class="bs-docs-separator" />
+
+              <h2>Exemplos</h2>
+
+              <h3>Subtitulo</h3>
+              <p>Descrição</p>
+
+              <div class="bs-docs-example">
+                <input type="hidden" id="SamplejQueryCustomSelect" class="customselect" data-overload="1|Laranja,2|Azul,3|Vermelho,5|Roxo,6|Branco,7|Preto" />
+              </div>
+              <pre class="prettyprint linenums">&lt;!-- Código de exemplo --&gt;</pre>
+
+              <hr class="bs-docs-separator" />
+
+              <h2>Como usar</h2>
+
+              <h3>HTML</h3>
+              <p>Descrição</p>
+              <pre class="prettyprint linenums">
+&lt;!-- Input com dados para montar o CustomSelect --&gt;
+&lt;input type="hidden" id="sample" class="customselect" data-overload="1|Novo,2|Usado" /&gt;</pre>
+
+              <h3>JavaScript</h3>
+              <p>Descrição</p>
+              <pre class="prettyprint linenums">
+&lt;!-- Função que inicia o CustomSelect --&gt;
+$('#sample').customselect();</pre>
+
+              <h3>Opções</h3>
+              <p>Descrição</p>
+              <table class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th style="width: 100px;">Nome</th>
+                    <th style="width: 50px;">Tipo</th>
+                    <th style="width: 150px;">Padrão</th>
+                    <th>Descrição</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Nome</td>
+                    <td>tipo</td>
+                    <td>padrão</td>
+                    <td>Decrição</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h3>Metodos</h3>
+
+              <h4>.customselect()</h4>
+              <p>Inicializa o CustomSelect</p>
+              <pre class="prettyprint linenums">$('#sample').customselect();</pre>
+
+              <h3>Eventos</h3>
+
+              <h4>onChange</h4>
+              <p>Descrição</p>
+              <pre class="prettyprint linenums">
+$('#sample').customselect({
+  onChange: function(){
+    // seu código...
+  }
+});</pre>
+
+            </section>
+
             <!--
-            <section id="jQueryLoader"><div class="page-header"><h1>jQueryLoader</h1></div></section>
             <section id="jQueryBannerFullPage"><div class="page-header"><h1>jQueryBannerFullPage</h1></div></section>
             <section id="jQueryMsgBox"><div class="page-header"><h1>jQueryMsgBox</h1></div></section>
             <section id="jQueryFormValidator"><div class="page-header"><h1>jQueryFormValidator</h1></div></section>
