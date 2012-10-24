@@ -107,7 +107,7 @@
               </div>
 
               <h2>Sobre</h2>
-              <p>O CustomSelect tem como principal objetivo facilitar o uso e a customização de selects com uma aparencia mais agradável e mais maleável do que às oferecidas pelos SO/Navegadores, feito utilizando HTML, CSS e JavaScript, tem sua estrutura aceita por todos os navegadores atuais. além de podemos ser submetido com um form ainda pode ser navegável pelo teclado facilitando seu uso.</p>
+              <p>O jQueryCustomSelect (Plugin jQuery Select) tem como principal objetivo facilitar o uso e a customização de selects com uma aparencia mais agradável e mais maleável do que às oferecidas pelos SO/Navegadores, feito utilizando HTML, CSS e JavaScript, tem sua estrutura aceita por todos os navegadores atuais. além de podemos ser submetido com um form ainda pode ser navegável pelo teclado facilitando seu uso.</p>
 
               <p><a class="btn btn-primary btn-large" href="https://github.com/tilowr/jQueryCustomSelect" target="_blank">Baixar do GitHub »</a></p>
 
@@ -116,13 +116,13 @@
               <h2>Exemplos</h2>
 
               <h3>Inicializando Normalmente</h3>
-              <p>Inicializando CustomSelect normalmente, à partir do input hidden que existe na página</p>
+              <p>Inicializando jQueryCustomSelect normalmente, à partir do input hidden que existe na página</p>
 
               <div class="bs-docs-example">
                 <input type="hidden" id="SamplejQueryCustomSelect" class="customselect" data-overload="1|Laranja,2|Azul,3|Vermelho,5|Roxo,6|Branco,7|Preto" />
               </div>
               <pre class="prettyprint linenums">
-&lt;!-- CustomSelect renderizado --&gt;
+&lt;!-- jQueryCustomSelect renderizado --&gt;
 &lt;div class="customselect_main"&gt;
   &lt;div class="customselect_container"&gt;
     &lt;input type="hidden" id="SamplejQueryCustomSelect" class="customselect" data-overload="1|Laranja,2|Azul,3|Vermelho,5|Roxo,6|Branco,7|Preto" /&gt;
@@ -137,7 +137,7 @@
 
               <h3>Alternando entre somente leitura e Leitura e Escrita</h3>
 
-              <p>É possivel mudar o CustomSelect para somente leitura utilizando o método <code>.customselect('toReadOnly')</code> ou já inicializa-lo dessa forma usando o atributo <code>data-readonly="true"</code>, quando está em modo somente leitura os binds de click, focus e navegação por setas são desabilitados, além de ser adicionado uma classe <code>readonly</code> e um atributo <code>readonly="readonly"</code>, para retornar para o modo Escrita e leitura basta utilizar o método <code>.customselect('toReadAndWrite')</code></p>
+              <p>É possivel mudar o jQueryCustomSelect para somente leitura utilizando o método <code>.customselect('toReadOnly')</code> ou já inicializa-lo dessa forma usando o atributo <code>data-readonly="true"</code>, quando está em modo somente leitura os binds de click, focus e navegação por setas são desabilitados, além de ser adicionado uma classe <code>readonly</code> e um atributo <code>readonly="readonly"</code>, para retornar para o modo Escrita e leitura basta utilizar o método <code>.customselect('toReadAndWrite')</code></p>
 
               <div class="bs-docs-example">
                 <input type="hidden" id="inputToReadOnly" class="customselect" data-overload="1|Laranja,2|Azul,3|Vermelho,5|Roxo,6|Branco,7|Preto" />
@@ -193,15 +193,15 @@ $('#btAddNewItem').click(function(e){
               <h2>Como usar</h2>
 
               <h3>HTML</h3>
-              <p>O CustomSelect é inicializado a partir de um input hidden, esse hidden tem valores que serão usados para popular a lista, os valores devem ser colocados um um atributo <code>data-overload=""</code></p>
+              <p>O jQueryCustomSelect é inicializado a partir de um input hidden, esse hidden tem valores que serão usados para popular a lista, os valores devem ser colocados um um atributo <code>data-overload=""</code></p>
               <pre class="prettyprint linenums">
-&lt;!-- Input com dados para montar o CustomSelect --&gt;
+&lt;!-- Input com dados para montar o jQueryCustomSelect --&gt;
 &lt;input type="hidden" id="sample" class="customselect" data-overload="1|Novo,2|Usado" /&gt;</pre>
 
               <h3>JavaScript</h3>
-              <p>O CustomSelect funciona como plugin jQuery, sendo preciso apenas, inicializa-lo</p>
+              <p>O jQueryCustomSelect funciona como plugin jQuery, sendo preciso apenas, inicializa-lo</p>
               <pre class="prettyprint linenums">
-&lt;!-- Função que inicia o CustomSelect --&gt;
+&lt;!-- Função que inicia o jQueryCustomSelect --&gt;
 $('#sample').customselect();</pre>
 
               <h3>Opções</h3>
@@ -256,11 +256,11 @@ $('#sample').customselect();</pre>
               <pre class="prettyprint linenums">$('#sample').customselect();</pre>
 
               <h4>.customselect('toReadOnly')</h4>
-              <p>Muda CustomSelect para modo somente leitura</p>
+              <p>Muda jQueryCustomSelect para modo somente leitura</p>
               <pre class="prettyprint linenums">$('#sample').customselect('toReadOnly');</pre>
 
               <h4>.customselect('toReadAndWrite')</h4>
-              <p>Muda CustomSelect para modo Escrita e Leitura</p>
+              <p>Muda jQueryCustomSelect para modo Escrita e Leitura</p>
               <pre class="prettyprint linenums">$('#sample').customselect('toReadAndWrite');</pre>
 
               <h4>.customselect('addNewItem')</h4>
@@ -310,13 +310,13 @@ $('#sample').customselect({
               <h3>HTML</h3>
               <p>Descrição</p>
               <pre class="prettyprint linenums">
-&lt;!-- Input com dados para montar o CustomSelect --&gt;
+&lt;!-- Input com dados para montar o jQueryCustomSelect --&gt;
 &lt;input type="hidden" id="sample" class="customselect" data-overload="1|Novo,2|Usado" /&gt;</pre>
 
               <h3>JavaScript</h3>
               <p>Descrição</p>
               <pre class="prettyprint linenums">
-&lt;!-- Função que inicia o CustomSelect --&gt;
+&lt;!-- Função que inicia o jQueryCustomSelect --&gt;
 $('#sample').customselect();</pre>
 
               <h3>Opções</h3>
@@ -372,23 +372,29 @@ $('#sample').customselect({
       <hr>
     </div><!--/.fluid-container-->
     <footer class="footer">
-      <div class="container">
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p style="margin-bottom: 10px;">TiloWR jQuery Plugins. Made with <a target="_blank" href="http://getbootstrap.com">Bootstrap.</a></p>
-        <p style="margin-bottom: 10px;"><a href="https://twitter.com/TiloWR" class="twitter-follow-button" data-show-count="false" data-lang="pt">Seguir @TiloWR</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
-        <p style="margin-bottom: 10px;"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tilowr.com.br/github/" data-via="tilowr" data-lang="pt" data-hashtags="jqueryPlugins">Tweetar</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
-        <p><div class="fb-subscribe" data-href="http://www.facebook.com/programador.frontend" data-layout="button_count" data-show-faces="true" data-width="450"></div></p>
-  <!--
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span3"></div>
+          <div class="span9">
+            <div class="">
+              <p class="pull-right"><a href="#">Back to top</a></p>
+              <p style="margin-bottom: 10px;">TiloWR jQuery Plugins. Made with <a target="_blank" href="http://getbootstrap.com">Bootstrap.</a></p>
+              <p style="margin-bottom: 10px;"><a href="https://twitter.com/TiloWR" class="twitter-follow-button" data-show-count="false" data-lang="pt">Seguir @TiloWR</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
+              <p style="margin-bottom: 10px;"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tilowr.com.br/github/" data-via="tilowr" data-lang="pt" data-hashtags="jqueryPlugins">Tweetar</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
 
-<p>Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank" wrc_done="true">@twitter</a>&nbsp;<span class="wrc_icon wrc13" rating="{&quot;icon&quot;:&quot;green3-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:3,&quot;flags&quot;:{}}"></span> by <a href="http://twitter.com/mdo" target="_blank" wrc_done="true">@mdo</a>&nbsp;<span class="wrc_icon wrc13" rating="{&quot;icon&quot;:&quot;green3-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:3,&quot;flags&quot;:{}}"></span> and <a href="http://twitter.com/fat" target="_blank" wrc_done="true">@fat</a>&nbsp;<span class="wrc_icon wrc13" rating="{&quot;icon&quot;:&quot;green3-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:3,&quot;flags&quot;:{}}"></span>.</p>
-<p>Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank" wrc_done="true">Apache License v2.0</a>&nbsp;<span class="wrc_icon wrc11" rating="{&quot;icon&quot;:&quot;green1-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:1,&quot;flags&quot;:{}}"></span>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/" wrc_done="true">CC BY 3.0</a>&nbsp;<span class="wrc_icon wrc11" rating="{&quot;icon&quot;:&quot;green1-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:1,&quot;flags&quot;:{}}"></span>.</p>
-<p>Icons from <a href="http://glyphicons.com" wrc_done="true">Glyphicons Free</a>&nbsp;<span class="wrc_icon wrc0" rating="{&quot;icon&quot;:&quot;grey0-16.png&quot;,&quot;rating&quot;:0,&quot;weight&quot;:0,&quot;flags&quot;:{}}"></span>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/" wrc_done="true">CC BY 3.0</a>&nbsp;<span class="wrc_icon wrc11" rating="{&quot;icon&quot;:&quot;green1-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:1,&quot;flags&quot;:{}}"></span>.</p>
-<ul class="footer-links">
-<li><a href="http://blog.getbootstrap.com" wrc_done="true">Read the blog</a>&nbsp;<span class="wrc_icon wrc0" rating="{&quot;icon&quot;:&quot;grey0-16.png&quot;,&quot;rating&quot;:0,&quot;weight&quot;:0,&quot;flags&quot;:{}}"></span></li>
-<li><a href="https://github.com/twitter/bootstrap/issues?state=open" wrc_done="true">Submit issues</a>&nbsp;<span class="wrc_icon wrc13" rating="{&quot;icon&quot;:&quot;green3-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:3,&quot;flags&quot;:{&quot;it&quot;:1}}"></span></li>
-<li><a href="https://github.com/twitter/bootstrap/wiki" wrc_done="true">Roadmap and changelog</a>&nbsp;<span class="wrc_icon wrc13" rating="{&quot;icon&quot;:&quot;green3-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:3,&quot;flags&quot;:{&quot;it&quot;:1}}"></span></li>
-</ul>
--->
+              <!--
+                <p>Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank" wrc_done="true">@twitter</a>&nbsp;<span class="wrc_icon wrc13" rating="{&quot;icon&quot;:&quot;green3-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:3,&quot;flags&quot;:{}}"></span> by <a href="http://twitter.com/mdo" target="_blank" wrc_done="true">@mdo</a>&nbsp;<span class="wrc_icon wrc13" rating="{&quot;icon&quot;:&quot;green3-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:3,&quot;flags&quot;:{}}"></span> and <a href="http://twitter.com/fat" target="_blank" wrc_done="true">@fat</a>&nbsp;<span class="wrc_icon wrc13" rating="{&quot;icon&quot;:&quot;green3-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:3,&quot;flags&quot;:{}}"></span>.</p>
+                <p>Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank" wrc_done="true">Apache License v2.0</a>&nbsp;<span class="wrc_icon wrc11" rating="{&quot;icon&quot;:&quot;green1-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:1,&quot;flags&quot;:{}}"></span>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/" wrc_done="true">CC BY 3.0</a>&nbsp;<span class="wrc_icon wrc11" rating="{&quot;icon&quot;:&quot;green1-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:1,&quot;flags&quot;:{}}"></span>.</p>
+                <p>Icons from <a href="http://glyphicons.com" wrc_done="true">Glyphicons Free</a>&nbsp;<span class="wrc_icon wrc0" rating="{&quot;icon&quot;:&quot;grey0-16.png&quot;,&quot;rating&quot;:0,&quot;weight&quot;:0,&quot;flags&quot;:{}}"></span>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/" wrc_done="true">CC BY 3.0</a>&nbsp;<span class="wrc_icon wrc11" rating="{&quot;icon&quot;:&quot;green1-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:1,&quot;flags&quot;:{}}"></span>.</p>
+                <ul class="footer-links">
+                <li><a href="http://blog.getbootstrap.com" wrc_done="true">Read the blog</a>&nbsp;<span class="wrc_icon wrc0" rating="{&quot;icon&quot;:&quot;grey0-16.png&quot;,&quot;rating&quot;:0,&quot;weight&quot;:0,&quot;flags&quot;:{}}"></span></li>
+                <li><a href="https://github.com/twitter/bootstrap/issues?state=open" wrc_done="true">Submit issues</a>&nbsp;<span class="wrc_icon wrc13" rating="{&quot;icon&quot;:&quot;green3-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:3,&quot;flags&quot;:{&quot;it&quot;:1}}"></span></li>
+                <li><a href="https://github.com/twitter/bootstrap/wiki" wrc_done="true">Roadmap and changelog</a>&nbsp;<span class="wrc_icon wrc13" rating="{&quot;icon&quot;:&quot;green3-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:3,&quot;flags&quot;:{&quot;it&quot;:1}}"></span></li>
+              </ul>
+              -->
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
     <!-- Le javascript
