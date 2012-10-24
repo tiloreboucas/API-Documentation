@@ -49,7 +49,7 @@
     </script>
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -62,16 +62,16 @@
           <a class="brand" href="#">TiloWR - jQuery Plugins</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li><!--
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>-->
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="http://tilowr.com.br/sobre-mim/" target="_blank">About</a></li>
+              <li><a href="http://tilowr.com.br/contato/" target="_blank">Contact</a></li>
               <li><a href="http://tilowr.com.br" target="_blank">Blog</a></li>
               <li><a href="https://github.com/tilowr" target="_blank">GitHub</a></li>
               <li><a href="http://www.linkedin.com/in/witaloreboucas" target="_blank">LinkedIn</a></li>
               <li><a href="https://twitter.com/tilowr" target="_blank">Twitter</a></li>
               <li><a href="https://plus.google.com/111686011062366113684?rel=author" target="_blank">Google+</a></li>
             </ul>
-          </div><!--/.nav-collapse -->
+          </div>
         </div>
       </div>
     </div>
@@ -81,12 +81,14 @@
         <div class="span3">
           <div class="bs-docs-sidebar">
             <ul class="nav nav-list bs-docs-sidenav affix">
-      				<li class="active"><a href="#jQueryCustomSelect">jQueryCustomSelect</a></li><!--  
-      				<li><a href="#jQueryLoader">jQueryLoader</a></li>
-      				<li><a href="#jQueryBannerFullPage">jQueryBannerFullPage</a></li>
-      				<li><a href="#jQueryMsgBox">jQueryMsgBox</a></li>
-      				<li><a href="#jQueryFormValidator">jQueryFormValidator</a></li>
-      				<li><a href="#jQueryLockTableColumn">jQueryLockTableColumn</a></li>-->
+      				<li><a href="#jQueryCustomSelect"><i class="icon-chevron-right"></i>jQueryCustomSelect</a></li>
+              <!--  
+              <li><a href="#jQueryLoader"><i class="icon-chevron-right"></i>jQueryLoader</a></li>
+              <li><a href="#jQueryBannerFullPage"><i class="icon-chevron-right"></i>jQueryBannerFullPage</a></li>
+              <li><a href="#jQueryMsgBox"><i class="icon-chevron-right"></i>jQueryMsgBox</a></li>
+              <li><a href="#jQueryFormValidator"><i class="icon-chevron-right"></i>jQueryFormValidator</a></li>
+              <li><a href="#jQueryLockTableColumn"><i class="icon-chevron-right"></i>jQueryLockTableColumn</a></li>
+              -->
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
@@ -282,7 +284,8 @@ $('#sample').customselect({
             <section id="jQueryMsgBox"><div class="page-header"><h1>jQueryMsgBox</h1></div></section>
             <section id="jQueryFormValidator"><div class="page-header"><h1>jQueryFormValidator</h1></div></section>
             <section id="jQueryLockTableColumn"><div class="page-header"><h1>jQueryLockTableColumn</h1></div></section>
-          </div><!--/row-->
+            -->
+          </div>
         </div><!--/span-->
       </div><!--/row-->
 
@@ -298,6 +301,7 @@ $('#sample').customselect({
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="http://tilowr.com.br/Scripts/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="http://tilowr.com.br/Scripts/bootstrap/js/bootstrap.js"></script>
 
     <link href="http://tilowr.com.br/Scripts/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
     <script type="text/javascript" src="http://tilowr.com.br/Scripts/google-code-prettify/prettify.js"></script>
@@ -307,6 +311,20 @@ $('#sample').customselect({
 
     <script type="text/javascript">
       $(document).ready(function(){
+        var $window = $(window)
+
+        // Disable certain links in docs
+        $('section [href^=#]').click(function (e) {
+          e.preventDefault()
+        })
+
+        // side bar
+        $('.bs-docs-sidenav').affix({
+          offset: {
+          top: function () { return $window.width() <= 980 ? 290 : 210 }
+          , bottom: 270
+          }
+        })
         //prettify
         prettyPrint();
 
