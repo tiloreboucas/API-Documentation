@@ -41,7 +41,16 @@
   </head>
 
   <body data-spy="scroll" data-target=".bs-docs-sidebar">
-
+    <div id="fb-root"></div>
+    <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=244561512336770";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -94,6 +103,7 @@
               <div class="page-header">
                 <h1>jQueryCustomSelect <small>jquery.customselect.js</small></h1>
                 <p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tilowr.com.br/github/#jQueryCustomSelect" data-via="tilowr" data-lang="pt" data-hashtags="jqueryPlugins">Tweetar</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
+                <p><div class="fb-like" data-href="http://tilowr.com.br/github/#jQueryCustomSelect" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false"></div></p>
               </div>
 
               <h2>Sobre</h2>
@@ -367,6 +377,7 @@ $('#sample').customselect({
         <p style="margin-bottom: 10px;">TiloWR jQuery Plugins. Made with <a target="_blank" href="http://getbootstrap.com">Bootstrap.</a></p>
         <p style="margin-bottom: 10px;"><a href="https://twitter.com/TiloWR" class="twitter-follow-button" data-show-count="false" data-lang="pt">Seguir @TiloWR</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
         <p style="margin-bottom: 10px;"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tilowr.com.br/github/" data-via="tilowr" data-lang="pt" data-hashtags="jqueryPlugins">Tweetar</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
+        <p><div class="fb-subscribe" data-href="http://www.facebook.com/programador.frontend" data-layout="button_count" data-show-faces="true" data-width="450"></div></p>
   <!--
 
 <p>Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank" wrc_done="true">@twitter</a>&nbsp;<span class="wrc_icon wrc13" rating="{&quot;icon&quot;:&quot;green3-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:3,&quot;flags&quot;:{}}"></span> by <a href="http://twitter.com/mdo" target="_blank" wrc_done="true">@mdo</a>&nbsp;<span class="wrc_icon wrc13" rating="{&quot;icon&quot;:&quot;green3-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:3,&quot;flags&quot;:{}}"></span> and <a href="http://twitter.com/fat" target="_blank" wrc_done="true">@fat</a>&nbsp;<span class="wrc_icon wrc13" rating="{&quot;icon&quot;:&quot;green3-16.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:3,&quot;flags&quot;:{}}"></span>.</p>
