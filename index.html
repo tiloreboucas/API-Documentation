@@ -82,16 +82,16 @@
           <div class="bs-docs-sidebar">
             <ul class="nav nav-list bs-docs-sidenav affix">
       				<li><a href="#jQueryCustomSelect"><i class="icon-chevron-right"></i>jQueryCustomSelect</a></li>
-              <!--  
               <li><a href="#jQueryLoader"><i class="icon-chevron-right"></i>jQueryLoader</a></li>
+              <!--  
               <li><a href="#jQueryBannerFullPage"><i class="icon-chevron-right"></i>jQueryBannerFullPage</a></li>
               <li><a href="#jQueryMsgBox"><i class="icon-chevron-right"></i>jQueryMsgBox</a></li>
               <li><a href="#jQueryFormValidator"><i class="icon-chevron-right"></i>jQueryFormValidator</a></li>
               <li><a href="#jQueryLockTableColumn"><i class="icon-chevron-right"></i>jQueryLockTableColumn</a></li>
               -->
             </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
+          </div>
+        </div>
         <div class="span9">
           <div class="hero-unit">
             <h1>Plugins para jQuery</h1>
@@ -115,7 +115,7 @@
 
               <h2>Exemplos</h2>
 
-              <h3>Inicializando Normalmente</h3>
+              <h3>Markup</h3>
               <p>Inicializando jQueryCustomSelect normalmente, à partir do input hidden que existe na página</p>
 
               <div class="bs-docs-example">
@@ -287,84 +287,122 @@ $('#sample').customselect({
               <a href="https://github.com/tilowr/jQueryCustomSelect/issues" class="btn" target="_blank">Criar uma Issues</a>
 
             </section>
-<!--
+            
             <section id="jQueryLoader">
-              <div class="page-header"><h1>jQueryLoader <small>jquery.loader.js</small></h1></div>
+              <div class="page-header">
+                <h1>jQueryLoader <small>jquery.loader.js</small></h1>
+                <p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tilowr.com.br/github/#jQueryLoader" data-via="tilowr" data-lang="pt" data-hashtags="jqueryPlugins">Tweetar</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
+                <p><div class="fb-like" data-href="http://tilowr.com.br/github/#jQueryLoader" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false"></div></p>
+              </div>
 
               <h2>Sobre</h2>
-              <p>Descrição</p>
+              <p>jQueryLoader é um plugin de jQuery que tem como objetivo substituir, esconder ou simplesmente ocultar um objeto na tela enquanto seu carregamento não é finalizado, muito útil para requisições Ajax</p>
 
-              <p><a class="btn btn-primary btn-large" href="#" target="_blank">Baixar do GitHub »</a></p>
+              <p><a class="btn btn-primary btn-large" href="https://github.com/tilowr/jQueryLoader" target="_blank">Baixar do GitHub »</a></p>
 
               <hr class="bs-docs-separator" />
 
               <h2>Exemplos</h2>
 
-              <h3>Subtitulo</h3>
-              <p>Descrição</p>
+              <h3>Markup</h3>
+              <p>o jQueryLoader pega todas as caracteristicas do item que será ocultado e tenta ocupar o mesmo espaço para que o usuário não tenha a impressão de que a tela está movendo, dando uma sensação mais agradável a sua navegação</p>
 
               <div class="bs-docs-example">
-                <input type="hidden" id="SamplejQueryCustomSelect" class="customselect" data-overload="1|Laranja,2|Azul,3|Vermelho,5|Roxo,6|Branco,7|Preto" />
+                <div id="samplejQueryLoader">Conteudo</div>
               </div>
-              <pre class="prettyprint linenums">&lt;!-- Código de exemplo --&gt;</pre>
+              <pre class="prettyprint linenums">
+&lt;!-- jQueryLoader renderizado --&gt;
+&lt;div class="loader_container" style=""&gt;
+  &lt;img src="imageUrl.gif" alt="Img Loader" style="" /&gt;
+&lt;/div&gt;</pre>
+
+              <h3>Inicializando e Finalizando</h3>
+              <p>Como os atributos de referência do loader ficam no objeto que está sendo carregado ele poder ser iniciado por um objeto, e finalizado por outro</p>
+
+              <div class="bs-docs-example">
+                <div id="sampleActionjQueryLoader">Conteudo</div>
+
+                <a href="#" id="btLoadjQueryLoader" class="btn">Carregar</a>
+                <a href="#" id="btFinishjQueryLoader" class="btn">Finalizar</a>
+              </div>
+
+              <pre class="prettyprint linenums">
+&lt;!-- Iniciando Normalmente --&gt;
+&lt;div id="sampleActionjQueryLoader"&gt;Conteudo&lt;/div&gt;
+
+&lt;a href="#" id="btLoadjQueryLoader" class="btn"&gt;Carregar&lt;/a&gt;
+&lt;a href="#" id="btFinishjQueryLoader" class="btn"&gt;Finalizar&lt;/a&gt;
+
+&lt;!-- Carrega --&gt;
+$('#btLoadjQueryLoader').click(function(){
+  $('#sampleActionjQueryLoader').loader();
+});
+
+&lt;!-- Finaliza --&gt;
+$('#btFinishjQueryLoader').click(function(){
+  $('#sampleActionjQueryLoader').loader('end');
+});</pre>
 
               <hr class="bs-docs-separator" />
 
               <h2>Como usar</h2>
 
               <h3>HTML</h3>
-              <p>Descrição</p>
+              <p>Pode ser inicializado tanto com objetos em linha quanto em objetos em bloco</p>
               <pre class="prettyprint linenums">
-&lt;!-- Input com dados para montar o jQueryCustomSelect --&gt;
-&lt;input type="hidden" id="sample" class="customselect" data-overload="1|Novo,2|Usado" /&gt;</pre>
+&lt;!-- Div que será subistituida pelo jQueryLoader --&gt;
+&lt;div id="samplejQueryLoader"&gt;Conteudo&lt;/div&gt;</pre>
 
               <h3>JavaScript</h3>
               <p>Descrição</p>
               <pre class="prettyprint linenums">
-&lt;!-- Função que inicia o jQueryCustomSelect --&gt;
-$('#sample').customselect();</pre>
+&lt;!-- Função que inicia o jQueryLoader --&gt;
+$('#samplejQueryLoader').loader();</pre>
 
               <h3>Opções</h3>
-              <p>Descrição</p>
+              <p>Opções pode ser passadas na inicialização atraz de objetos JSON <code>{atributo: valor}</code> </p>
+
               <table class="table table-bordered table-striped">
                 <thead>
                   <tr>
-                    <th style="width: 100px;">Nome</th>
-                    <th style="width: 50px;">Tipo</th>
-                    <th style="width: 150px;">Padrão</th>
+                    <th>Nome</th>
+                    <th>Tipo</th>
+                    <th>Padrão</th>
                     <th>Descrição</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Nome</td>
-                    <td>tipo</td>
-                    <td>padrão</td>
-                    <td>Decrição</td>
+                    <td>color</td>
+                    <td>String</td>
+                    <td>white</td>
+                    <td>atualmente esse campo aceita apenas black e white, e essa cor faz referencia a cor de fundo do elemento</td>
+                  </tr>
+                  <tr>
+                    <td>imgUrl</td>
+                    <td>String</td>
+                    <td></td>
+                    <td>Caso você não queria usar a imagem padrão pode passar a url completa de uma imagem de sua preferência</td>
                   </tr>
                 </tbody>
               </table>
 
               <h3>Metodos</h3>
 
-              <h4>.customselect()</h4>
-              <p>Inicializa o CustomSelect</p>
-              <pre class="prettyprint linenums">$('#sample').customselect();</pre>
+              <h4>.loader()</h4>
+              <p>Inicializa o jQueryLoader</p>
+              <pre class="prettyprint linenums">$('#samplejQueryLoader').loader();</pre>
 
-              <h3>Eventos</h3>
+              <h4>.loader('end')</h4>
+              <p>Finaliza o jQueryLoader</p>
+              <pre class="prettyprint linenums">$('#samplejQueryLoader').loader('end');</pre>
 
-              <h4>onChange</h4>
-              <p>Descrição</p>
-              <pre class="prettyprint linenums">
-$('#sample').customselect({
-  onChange: function(){
-    // seu código...
-  }
-});</pre>
+              <h3>Dúvidas, Sugestões ou Erros</h3>
+              <p>Caso tenha qualquer dúvida sobre funcionalidade, ou mesmo uma sugestão de melhoria, e principalmente se encontrar um erro, não deixe de entrar em contato pelo diretório padrão de issues do GitHub</p>
+              <a href="https://github.com/tilowr/jQueryLoader/issues" class="btn" target="_blank">Criar uma Issues</a>
 
             </section>
-
-            
+            <!--
             <section id="jQueryBannerFullPage"><div class="page-header"><h1>jQueryBannerFullPage</h1></div></section>
             <section id="jQueryMsgBox"><div class="page-header"><h1>jQueryMsgBox</h1></div></section>
             <section id="jQueryFormValidator"><div class="page-header"><h1>jQueryFormValidator</h1></div></section>
@@ -405,17 +443,19 @@ $('#sample').customselect({
         </div>
       </div>
     </footer>
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+
     <script type="text/javascript" src="http://tilowr.com.br/Scripts/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="http://tilowr.com.br/Scripts/bootstrap/js/bootstrap.js"></script>
 
     <link href="http://tilowr.com.br/Scripts/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
     <script type="text/javascript" src="http://tilowr.com.br/Scripts/google-code-prettify/prettify.js"></script>
 
+    <!-- jQueryCustomSelect -->
     <script type="text/javascript" src="http://tilowr.com.br/github/jQueryCustomSelect/jquery.customselect.js"></script>
     <link href="http://tilowr.com.br/github/jQueryCustomSelect/jquery.customselect.css" rel="stylesheet" />
+
+    <!-- jQueryCustomSelect -->
+    <script type="text/javascript" src="http://tilowr.com.br/github/jQueryLoader/jquery.loader.js"></script>
 
     <script type="text/javascript">
       $(document).ready(function(){
@@ -458,6 +498,19 @@ $('#sample').customselect({
         $('#btAddNewItem').click(function(e){
           e.preventDefault();
           $('#hiddenAddNewItem').customselect('addNewItem', {id: $('#idAddNewItem').val(), text: $('#textAddNewItem').val()});
+        });
+
+        // Loader
+        $('#samplejQueryLoader').loader();
+
+        // Carrega
+        $('#btLoadjQueryLoader').click(function(){
+          $('#sampleActionjQueryLoader').loader();
+        });
+
+        // Finaliza
+        $('#btFinishjQueryLoader').click(function(){
+          $('#sampleActionjQueryLoader').loader('end')
         });
       });
     </script>
